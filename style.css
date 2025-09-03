@@ -160,3 +160,33 @@ ul {
 .button-draw:hover {
     background-color: var(--color-button-hover);
 }
+
+
+.name-list {
+    list-style: none;            
+    padding: 0;
+    margin-top: 15px;
+    font-family: 'Inter', sans-serif;
+}
+
+.name-list li {
+    background-color: #f4f4f9;  
+    border: 1px solid #ddd;      
+    padding: 10px 15px;
+    margin: 5px 0;
+    border-radius: 8px;         
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+/* Animación al pasar el mouse */
+.name-list li:hover {
+    background-color: #e0e7ff;   
+    transform: scale(1.02);      
+}
+
+.name-list li::before {
+    content: "👤 ";  
+}
