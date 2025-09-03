@@ -1,5 +1,6 @@
 // variable tipo Array para guardar los nombres de los amigos
 let amigos = [];
+let sorteado = false;
 
 // Función para agregar un amigo
 function agregarAmigo() {
@@ -9,6 +10,13 @@ function agregarAmigo() {
     if (nombre === "") {
         alert("Por favor, escribe un nombre válido.");
         return;
+    }
+
+    if (sorteado) {
+        amigos = [];
+        document.getElementById("listaAmigos").innerHTML = "";
+        document.getElementById("resultado").innerHTML = "";
+        sorteado = false; // volvemos al estado inicial
     }
 
     // Agrega el nombre al array
@@ -46,6 +54,10 @@ function sortearAmigo() {
     const resultadoLista = document.getElementById("resultado");
     resultadoLista.innerHTML = `<li>🎉 Tu amigo secreto es: <strong>${resultado}</strong></li>`;
 
+    //limpia la lista que muestra en pantalla
     document.getElementById("listaAmigos").innerHTML = "";
+
+    // Marca que ya se sorteó
+    sorteado = true;
 }
 
