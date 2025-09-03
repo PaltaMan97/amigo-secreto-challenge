@@ -8,7 +8,7 @@ function agregarAmigo() {
     const nombre = input.value.trim(); // elimina espacios extra
 
     if (nombre === "") {
-        alert("Por favor, escribe un nombre válido.");
+        alert("Por favor, ingresa un nombre válido.");
         return;
     }
 
